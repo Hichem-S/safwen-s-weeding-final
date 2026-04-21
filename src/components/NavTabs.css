@@ -1,0 +1,41 @@
+.nav-tabs {
+  display: flex;
+  background: #fff;
+  border-bottom: 0.5px solid rgba(180,130,80,0.2);
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+
+.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tab {
+  flex: 1;
+  min-width: 82px;
+  padding: 1rem 0.5rem;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2.5px solid transparent;
+  background: none;
+  color: #a08060;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-tab:hover {
+  color: #9a5a20;
+}
+
+.nav-tab.active {
+  color: #9a5a20;
+  border-bottom-color: #c8966a;
+}

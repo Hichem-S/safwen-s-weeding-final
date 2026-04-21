@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-gold: #c8966a;
+  --color-gold-dark: #9a5a20;
+  --color-brown-deep: #2c1a0e;
+  --color-brown-mid: #4a2c1a;
+  --color-brown-light: #6b3d1e;
+  --color-cream: #f5e6d0;
+  --color-cream-muted: #e8d5be;
+  --color-text-primary: #1a0f07;
+  --color-text-secondary: #7a5a40;
+  --color-bg: #fdf8f3;
+  --color-surface: #ffffff;
+  --color-border: rgba(180, 130, 80, 0.2);
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Jost', system-ui, sans-serif;
+  --font-arabic: 'Noto Naskh Arabic', 'Arabic UI Text', serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Arabic: use Arabic-optimised font everywhere */
+[lang="ar"] body,
+[lang="ar"] button,
+[lang="ar"] input,
+[lang="ar"] textarea,
+[lang="ar"] .section-title,
+[lang="ar"] .section-subtitle,
+[lang="ar"] .detail-label,
+[lang="ar"] .detail-value,
+[lang="ar"] .mem-title,
+[lang="ar"] .mem-body,
+[lang="ar"] .wish-name,
+[lang="ar"] .wish-message,
+[lang="ar"] .tl-title,
+[lang="ar"] .tl-desc {
+  font-family: var(--font-arabic);
+  line-height: 1.9;
+}
+
+/* RTL nav scrolls from the right */
+[dir="rtl"] .nav-tabs {
+  direction: rtl;
+}
+
+[dir="rtl"] .quote-block {
+  border-left: none;
+  border-right: 3px solid var(--color-gold);
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+[dir="rtl"] .love-letter::before {
+  right: auto;
+  left: 16px;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+input, textarea {
+  font-family: var(--font-sans);
+}
+
+textarea {
+  resize: vertical;
+}

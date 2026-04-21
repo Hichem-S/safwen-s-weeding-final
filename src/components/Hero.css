@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+.hero {
+  position: relative;
+  background: #f5f0e8;
+  padding: 3.5rem 2rem 3.5rem;
+  text-align: center;
+  overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Subtle paper texture overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(255,252,245,0.7) 20%, transparent 80%),
+    radial-gradient(ellipse at 20% 20%, rgba(245,240,225,0.5) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(240,232,215,0.4) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ── Botanical corner SVGs ─────────────────────────── */
+.botanical {
+  position: absolute;
+  pointer-events: none;
+}
+
+.botanical svg {
+  display: block;
+}
+
+.botanical-tl {
+  top: -8px;
+  left: -8px;
+  width: clamp(120px, 28vw, 200px);
+  height: clamp(120px, 28vw, 200px);
+}
+
+.botanical-tr {
+  top: -8px;
+  right: -8px;
+  width: clamp(120px, 28vw, 200px);
+  height: clamp(120px, 28vw, 200px);
+}
+
+.botanical-bl {
+  bottom: -8px;
+  left: -8px;
+  width: clamp(100px, 22vw, 160px);
+  height: clamp(100px, 22vw, 160px);
+}
+
+.botanical-br {
+  bottom: -8px;
+  right: -8px;
+  width: clamp(100px, 22vw, 160px);
+  height: clamp(100px, 22vw, 160px);
+}
+
+/* ── Invitation text ───────────────────────────────── */
+.hero-invite-label {
+  position: relative;
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(10px, 2.2vw, 12px);
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #8a6a40;
+  margin-bottom: 0.4rem;
+}
+
+.hero-wedding-of {
+  position: relative;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(13px, 3vw, 16px);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7a5a30;
+  margin-bottom: 0.6rem;
+}
+
+/* ── Script names ──────────────────────────────────── */
+.hero-names {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin: 0.25rem 0 0.5rem;
+  line-height: 1;
+}
+
+.hero-name-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(3rem, 12vw, 5.5rem);
+  color: #8a6030;
+  line-height: 1.05;
+  display: block;
+}
+
+.hero-and-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(1.8rem, 7vw, 3.2rem);
+  color: #a07840;
+  line-height: 1.1;
+  display: block;
+}
+
+/* ── Date block ────────────────────────────────────── */
+.hero-date-block {
+  position: relative;
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.hero-month {
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(10px, 2.2vw, 12px);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8a6a40;
+  font-weight: 400;
+}
+
+.hero-date-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 300px;
+  margin: 0.3rem 0;
+}
+
+.hero-day-label,
+.hero-time-label {
+  flex: 1;
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(8px, 1.8vw, 10px);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8a6a40;
+  font-weight: 400;
+  position: relative;
+}
+
+.hero-day-label {
+  text-align: right;
+  padding-right: 0.9rem;
+}
+
+.hero-day-label::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.5px;
+  background: #a08050;
+}
+
+.hero-time-label {
+  text-align: left;
+  padding-left: 0.9rem;
+}
+
+.hero-time-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.5px;
+  background: #a08050;
+}
+
+.hero-date-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 8vw, 4rem);
+  font-weight: 300;
+  color: #7a5a30;
+  line-height: 1;
+  min-width: 60px;
+  text-align: center;
+}
+
+.hero-year {
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(10px, 2.2vw, 12px);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8a6a40;
+  font-weight: 400;
+}
+
+.hero-location {
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(9px, 2vw, 11px);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #a08050;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}

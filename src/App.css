@@ -1,0 +1,174 @@
+.app {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.main-content {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+/* ── Shared section styles ── */
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--color-gold-dark);
+}
+
+.section-subtitle {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+  margin-bottom: 1.75rem;
+}
+
+/* ── Card ── */
+.card {
+  background: var(--color-surface);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Quote block ── */
+.quote-block {
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.quote-block p {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--color-text-primary);
+}
+
+.quote-block span {
+  display: block;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: 0.5rem;
+}
+
+/* ── Gold badge ── */
+.gold-badge {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.gold-badge .big-num {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.gold-badge .badge-label {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+/* ── Form elements ── */
+.form-field {
+  margin-bottom: 0.85rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 0.5px solid rgba(180,130,80,0.35);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  background: #fdf8f3;
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  border-color: var(--color-gold);
+}
+
+.btn-primary {
+  padding: 0.7rem 1.6rem;
+  background: var(--color-gold-dark);
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--color-cream);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #7a4418;
+}
+
+.btn-ghost {
+  padding: 0.7rem 1rem;
+  background: none;
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+  transition: background 0.2s;
+}
+
+.btn-ghost:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+.btn-outline-gold {
+  width: 100%;
+  padding: 0.9rem;
+  background: none;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-md);
+  color: var(--color-gold-dark);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+
+.btn-outline-gold:hover {
+  background: rgba(200,150,80,0.08);
+}

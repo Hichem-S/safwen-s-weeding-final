@@ -1,0 +1,144 @@
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.photo-card {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  position: relative;
+}
+
+.photo-card:hover { opacity: 0.92; }
+
+.real-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(44,26,34,0.72));
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 6px 8px 6px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.real-photo:hover .photo-overlay { opacity: 1; }
+
+.photo-name {
+  font-size: 10px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+
+.photo-delete {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.photo-delete:hover { background: rgba(200,50,50,0.7); }
+
+/* Placeholder colour variants */
+.ph-1 { background: #e8d5be; color: #6b4020; }
+.ph-2 { background: #d4c4a8; color: #5a3815; }
+.ph-3 { background: #c9b896; color: #4e3010; }
+.ph-4 { background: #bfac85; color: #42280c; }
+.ph-5 { background: #b5a07a; color: #382008; }
+
+.ph-emoji { font-size: 22px; line-height: 1; }
+
+.ph-label {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.add-card {
+  border: 1.5px dashed rgba(180,130,80,0.4);
+  background: transparent;
+  color: #a08060;
+  gap: 4px;
+}
+
+.add-card:hover {
+  background: rgba(200,150,80,0.06);
+  opacity: 1;
+}
+
+.add-icon { font-size: 24px; font-weight: 300; line-height: 1; }
+
+.add-label {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.photo-hint {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+.photo-loading {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.photo-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-brown-deep);
+  color: var(--color-cream);
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-size: 13px;
+  z-index: 999;
+  pointer-events: none;
+  white-space: nowrap;
+  animation: toastIn 0.25s ease;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}

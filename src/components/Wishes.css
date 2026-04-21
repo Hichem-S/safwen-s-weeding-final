@@ -1,0 +1,238 @@
+.wishes-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.wstat { flex: 1; }
+
+.wstat-num {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--color-gold-dark);
+  line-height: 1;
+}
+
+.wstat-label {
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+.wstat-divider {
+  width: 0.5px;
+  height: 36px;
+  background: var(--color-border);
+}
+
+.wish-add-btn {
+  margin-bottom: 1.5rem;
+  font-size: 12px;
+}
+
+.wish-form {
+  margin-bottom: 1.5rem;
+}
+
+.wish-form-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-gold-dark);
+  margin-bottom: 1rem;
+}
+
+.wish-starters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.wish-starter-btn {
+  padding: 5px 12px;
+  background: #fdf5ee;
+  border: 0.5px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 11px;
+  color: var(--color-gold-dark);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  font-family: var(--font-sans);
+}
+
+.wish-starter-btn:hover {
+  background: #f5e6d0;
+  border-color: var(--color-gold);
+}
+
+.char-count {
+  text-align: right;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.wishes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.wish-card {
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+
+.wish-card:hover {
+  box-shadow: 0 2px 12px rgba(200, 150, 80, 0.1);
+}
+
+.wish-top {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.wish-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  flex-shrink: 0;
+  letter-spacing: 0.05em;
+}
+
+.wish-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.wish-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.wish-date {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  margin-top: 1px;
+}
+
+.wish-delete {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.wish-card:hover .wish-delete { opacity: 1; }
+.wish-delete:hover { background: #fbeaf0; color: #993556; }
+
+.wish-message {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--color-text-primary);
+}
+
+.wish-footer {
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 0.5px solid var(--color-border);
+  display: flex;
+  align-items: center;
+}
+
+.wish-like-btn {
+  background: none;
+  border: 0.5px solid var(--color-border);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-sans);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.wish-like-btn:hover:not(.liked) {
+  background: #fbeaf0;
+  border-color: #d4537e;
+  color: #993556;
+}
+
+.wish-like-btn.liked {
+  background: #fbeaf0;
+  border-color: #d4537e;
+  color: #993556;
+  cursor: default;
+}
+
+.wishes-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-secondary);
+  margin-top: 1rem;
+}
+
+.empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.wishes-empty p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.wish-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-brown-deep);
+  color: var(--color-cream);
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-size: 13px;
+  z-index: 999;
+  pointer-events: none;
+  white-space: nowrap;
+  animation: toastIn 0.25s ease;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}

@@ -1,0 +1,41 @@
+.lang-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 4px;
+  z-index: 10;
+}
+
+/* Flip side in RTL so it stays top-left visually */
+[dir="rtl"] .lang-toggle {
+  right: auto;
+  left: 1rem;
+}
+
+.lang-btn {
+  padding: 5px 11px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(160, 120, 60, 0.35);
+  border-radius: 999px;
+  color: #8a6a40;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.lang-btn:hover {
+  background: rgba(200, 160, 90, 0.18);
+  color: #6a4820;
+  border-color: rgba(160, 120, 60, 0.6);
+}
+
+.lang-btn.active {
+  background: #8a6030;
+  border-color: #8a6030;
+  color: #f5f0e8;
+  font-weight: 600;
+}
