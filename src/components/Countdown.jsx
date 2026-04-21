@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLang } from '../context/LangContext';
 import './Countdown.css';
 
-const WEDDING_DATE = new Date('2026-07-11T18:00:00');
+const WEDDING_DATE = new Date('2026-07-12T18:00:00');
 
 function getTimeLeft() {
   const diff = WEDDING_DATE - new Date();

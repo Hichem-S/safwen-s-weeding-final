@@ -15,17 +15,15 @@
   font-family: var(--font-sans);
   font-size: 12px;
   letter-spacing: 0.08em;
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.4s ease, transform 0.4s ease, background 0.2s, border-color 0.2s;
   box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-  pointer-events: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  /* Slide in from bottom on mount */
+  animation: fabSlideIn 0.4s ease forwards;
 }
 
-.music-fab.visible {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+@keyframes fabSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .music-fab.playing {
@@ -36,21 +34,25 @@
 .music-fab:hover {
   background: #4a2c1a;
   border-color: var(--color-gold);
+  transform: translateY(-1px);
 }
 
 .music-fab.playing:hover {
   background: #7a4418;
 }
 
+.music-fab:active {
+  transform: scale(0.97);
+}
+
 .music-fab-icon {
   font-size: 15px;
   line-height: 1;
-  animation: none;
 }
 
 .music-fab.playing .music-fab-icon {
   display: inline-block;
-  animation: pulse-note 1.6s ease-in-out infinite;
+  animation: pulseNote 1.6s ease-in-out infinite;
 }
 
 .music-fab-label {
@@ -61,7 +63,7 @@
   white-space: nowrap;
 }
 
-@keyframes pulse-note {
-  0%, 100% { transform: scale(1);   opacity: 1; }
-  50%       { transform: scale(1.2); opacity: 0.8; }
+@keyframes pulseNote {
+  0%, 100% { transform: scale(1);   opacity: 1;   }
+  50%       { transform: scale(1.2); opacity: 0.75; }
 }

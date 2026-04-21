@@ -1,12 +1,16 @@
 .app {
   min-height: 100vh;
   background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
 }
 
 .main-content {
+  flex: 1;
   max-width: 640px;
   margin: 0 auto;
   padding: 2rem 1.25rem 4rem;
+  width: 100%;
 }
 
 /* ── Shared section styles ── */
