@@ -5,7 +5,6 @@ import NavTabs from './components/NavTabs';
 import Overview from './components/Overview';
 import Countdown from './components/Countdown';
 import Schedule from './components/Schedule';
-import Photos from './components/Photos';
 import Guests from './components/Guests';
 import Venue from './components/Venue';
 import Wishes from './components/Wishes';
@@ -17,7 +16,6 @@ const TABS = [
   { id: 'countdown' },
   { id: 'venue'     },
   { id: 'schedule'  },
-  { id: 'photos'    },
   { id: 'wishes'    },
   { id: 'guests'    },
 ];
