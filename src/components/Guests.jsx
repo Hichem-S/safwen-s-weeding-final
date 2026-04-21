@@ -77,7 +77,7 @@ export default function Guests() {
         </div>
         <div className="stat-divider" />
         <div className="stat-cell">
-          <div className="stat-num">Jul 11</div>
+          <div className="stat-num">Jul 12</div>
           <div className="stat-label">{t.weddingDay}</div>
         </div>
       </div>
