@@ -16,10 +16,10 @@
 
 .nav-tab {
   flex: 1;
-  min-width: 82px;
-  padding: 1rem 0.5rem;
+  min-width: max-content;
+  padding: 1rem 0.75rem;
   font-size: 10.5px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 500;
   border: none;
